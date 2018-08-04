@@ -1,0 +1,505 @@
+{
+	"title": "RESTOperationV3",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for REST Operation page",
+	"id": "https://github.com/dotnet/docfx/schemas/rest.operationV3.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"apiVersion": {
+			"type": "string"
+		},
+		"groupName": {
+			"type": "string"
+		},
+		"httpVerb": {
+			"type": "string",
+			"enum": [
+				"GET",
+				"HEAD",
+				"POST",
+				"PUT",
+				"DELETE",
+				"CONNECT",
+				"OPTIONS",
+				"TRACE",
+				"PATCH"
+			]
+		},
+		"isDeprecated": {
+			"type": "boolean"
+		},
+		"isPreview": {
+			"type": "boolean"
+		},
+		"name": {
+			"type": "string",
+			"mergeType": "key"
+		},
+		"paths": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"requestBodies": {
+			"items": {
+				"$ref": "#/definitions/requestBody"
+			},
+			"type": "array"
+		},
+		"requestExamples": {
+			"items": {
+				"$ref": "#/definitions/example"
+			},
+			"type": "array"
+		},
+		"requestParameters": {
+			"items": {
+				"$ref": "#/definitions/requestParameter"
+			},
+			"type": "array"
+		},
+		"responses": {
+			"items": {
+				"$ref": "#/definitions/response"
+			},
+			"type": "array"
+		},
+		"responseExamples": {
+			"items": {
+				"$ref": "#/definitions/example"
+			},
+			"type": "array"
+		},
+		"seeAlso": {
+			"items": {
+				"additionalProperties": false,
+				"properties": {
+					"text": {
+						"type": "string"
+					},
+					"url": {
+						"type": "string"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"securities": {
+			"items": {
+				"$ref": "#/definitions/security"
+			},
+			"type": "array"
+		},
+		"servers": {
+			"items": {
+				"$ref": "#/definitions/server"
+			},
+			"type": "array"
+		},
+		"service": {
+			"type": "string"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"metadata": {
+			"type": "object"
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"definitions": {
+		"bodyProperty": {
+			"additionalProperties": false,
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"format": {
+					"type": "string"
+				},
+				"isAnyOf": {
+					"type": "boolean"
+				},
+				"isDeprecated": {
+					"type": "boolean"
+				},
+				"isNullable": {
+					"type": "boolean"
+				},
+				"isOneOf": {
+					"type": "boolean"
+				},
+				"isReadyOnly": {
+					"type": "boolean"
+				},
+				"isRequired": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"pattern": {
+					"type": "string"
+				},
+				"types": {
+					"items": {
+						"$ref": "#/definitions/restType"
+					},
+					"type": "array"
+				},
+				"typesTitle": {
+					"type": "string"
+				}
+			}
+		},
+		"example": {
+			"additionalProperties": false,
+			"properties": {
+				"definition": {
+					"type": "string"
+				},
+				"example": {
+					"type": "string"
+				},
+				"platform": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		},
+		"flow": {
+			"additionalProperties": false,
+			"properties": {
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"authorizationUrl": {
+					"type": "string"
+				},
+				"tokenUrl": {
+					"type": "string"
+				},
+				"scopes": {
+					"items": {
+						"$ref": "#/definitions/scope"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"requestBody": {
+			"additionalProperties": false,
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"isAnyOf": {
+					"type": "boolean"
+				},
+				"isOneOf": {
+					"type": "boolean"
+				},
+				"mediaType": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"schemas": {
+					"items": {
+						"$ref": "#/definitions/requestBodySchema"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"requestBodySchema": {
+			"additionalProperties": false,
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"properties": {
+					"items": {
+						"$ref": "#/definitions/bodyProperty"
+					},
+					"type": "array"
+				}
+			}
+		},
+		"requestParameter": {
+			"additionalProperties": false,
+			"properties": {
+				"isNullable": {
+					"description": "Valid only for query parameters and sets the ability to pass empty-valued parameters. Default value is false.",
+					"type": "boolean"
+				},
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"format": {
+					"type": "string"
+				},
+				"in": {
+					"type": "string",
+					"enum": [
+						"path",
+						"query",
+						"header",
+						"cookie"
+					]
+				},
+				"isDeprecated": {
+					"type": "boolean"
+				},
+				"isRequired": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"pattern": {
+					"type": "string"
+				},
+				"types": {
+					"items": {
+						"$ref": "#/definitions/restType"
+					},
+					"type": "array"
+				},
+				"typesTitle": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		},
+		"response": {
+			"additionalProperties": false,
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"statusCode": {
+					"type": "string"
+				},
+				"bodies": {
+					"items": {
+						"$ref": "#/definitions/responseBody"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"responseBody": {
+			"additionalProperties": false,
+			"properties": {
+				"mediaType": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"typesTitle": {
+					"type": "string"
+				},
+				"types": {
+					"items": {
+						"$ref": "#/definitions/restType"
+					},
+					"type": "array"
+				},
+				"schemas": {
+					"items": {
+						"$ref": "#/definitions/bodyProperty"
+					},
+					"type": "array"
+				}
+			}
+		},
+		"restType": {
+			"additionalProperties": false,
+			"properties": {
+				"additionalTypes": {
+					"items": {
+						"additionalProperties": false,
+						"properties": {
+							"uid": {
+								"type": "string"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				},
+				"enumValues": {
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				"isArray": {
+					"type": "boolean"
+				},
+				"isDictionary": {
+					"type": "boolean"
+				},
+				"kind": {
+					"type": "string"
+				},
+				"properties": {
+					"items": {
+						"$ref": "#/definitions/bodyProperty"
+					},
+					"type": "array"
+				},
+				"uid": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		},
+		"scope": {
+			"additionalProperties": false,
+			"properties": {
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"security": {
+			"additionalProperties": false,
+			"properties": {
+				"type": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"in": {
+					"type": "string",
+					"enum": [
+						"query",
+						"header",
+						"cookie"
+					]
+				},
+				"flows": {
+					"items": {
+						"$ref": "#/definitions/flow"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"server": {
+			"additionalProperties": false,
+			"properties": {
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"variables": {
+					"items": {
+						"$ref": "#/definitions/serverVariable"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"serverVariable": {
+			"additionalProperties": false,
+			"properties": {
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"defaultValue": {
+					"type": "string"
+				},
+				"values": {
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"name",
+		"summary"
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"id": "https://github.com/dotnet/docfx/test/schemas/contextobject.test.schema.json",
+	"title": "ContextObject",
+	"description": "The schema for context object",
+	"type": "object",
+	"properties": {
+		"brand": {
+			"type": "string",
+			"description": "The brand to be used for the content. Depending on the brand, this may override the UHF header. Not required. Example: azure"
+		},
+		"breadcrumb_path": {
+			"type": "string",
+			"contentType": "href",
+			"description": "The absolute URL or relative location (relative to the context file) to use for the breadcrumb path file. Overrides the docset value. Example: ./powershell/breadcrumb.json"
+		},
+		"chromeless": {
+			"type": "boolean",
+			"description": "Whether or not to use chromeless rendering. Only used for Hands-On Learning tutorials."
+		},
+		"searchScope": {
+			"description": "A list of the search scopes to use with the content.",
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"toc_rel": {
+			"type": "string",
+			"contentType": "href",
+			"description": "The absolute URL or relative location (relative to the context file) to use for the table of contents file. Overrides the docset value. Example: ../toc.yml"
+		},
+		"uhfHeaderId": {
+			"type": "string",
+			"description": "The UHFHeaderID to use for the content. Overrides the default docset value. Example: MSDocsHeader-Dynamics365"
+		}
+	}
+}

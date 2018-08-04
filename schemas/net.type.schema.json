@@ -1,0 +1,276 @@
+{
+	"title": "NetType",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for NetType page for class and struct",
+	"id": "https://github.com/dotnet/docfx/schemas/net.type.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"name",
+		"uid"
+	],
+	"properties": {
+		"metadata": {
+			"properties": {},
+			"type": "object"
+		},
+		"additionalNotes": {
+			"properties": {
+				"implementer": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"inheritor": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"caller": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"altCompliant": {
+			"type": "string",
+			"contentType": "xref"
+		},
+		"assemblies": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"attachedEvents": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"attachedProperties": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"attributes": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"constructors": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"derivedClasses": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"eiis": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"events": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"examples": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"extensionMethods": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"fields": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"fullName": {
+			"type": "string"
+		},
+		"implements": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"inheritances": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"inheritedMembers": {
+			"items": {
+				"properties": {
+					"uid": {
+						"type": "string",
+						"contentType": "xref"
+					},
+					"memberType": {
+						"type": "string",
+						"enum": [
+							"method",
+							"eii",
+							"property",
+							"event",
+							"field"
+						]
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"isDeprecated": {
+			"type": "boolean"
+		},
+		"methods": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"name": {
+			"type": "string"
+		},
+		"namespace": {
+			"type": "string",
+			"contentType": "xref"
+		},
+		"isNotClsCompliant": {
+			"type": "boolean"
+		},
+		"operators": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"permissions": {
+			"items": {
+				"properties": {
+					"uid": {
+						"type": "string",
+						"contentType": "xref"
+					},
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"properties": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"seeAlso": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"syntax": {
+			"type": "string"
+		},
+		"threadSafety": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"threadSafetyInfo": {
+			"properties": {
+				"isSupported": {
+					"type": "boolean"
+				},
+				"memberScope": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		},
+		"type": {
+			"type": "string",
+			"enum": [
+				"class",
+				"struct"
+			]
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"name",
+		"fullName",
+		"summary"
+	]
+}

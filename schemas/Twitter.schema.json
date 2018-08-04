@@ -1,0 +1,46 @@
+{
+	"title": "Twitter",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for the Twitter timeline page",
+	"id": "https://github.com/dotnet/docfx/schemas/Twitter.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"title": {
+			"type": "string",
+			"tags": [
+				"localizable"
+			]
+		},
+		"twitterAttribution": {
+			"type": "string"
+		},
+		"twitterTimeline": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"href": {
+					"type": "string",
+					"description": "Link href to twitter timeline."
+				},
+				"title": {
+					"type": "string",
+					"description": "Title for the twitter timeline, used as loading text."
+				}
+			}
+		}
+	},
+	"metadata": "/metadata"
+}

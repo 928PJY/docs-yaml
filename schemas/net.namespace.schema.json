@@ -1,0 +1,83 @@
+{
+	"title": "NetNamespace",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for NetNamespace page",
+	"id": "https://github.com/dotnet/docfx/schemas/net.namespace.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"name",
+		"uid"
+	],
+	"properties": {
+		"metadata": {
+			"properties": {},
+			"type": "object"
+		},
+		"classes": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"delegates": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"enums": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"interfaces": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"name": {
+			"type": "string"
+		},
+		"seeAlso": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"structs": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"metadata": "/metadata"
+}

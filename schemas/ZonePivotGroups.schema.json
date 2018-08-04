@@ -1,0 +1,66 @@
+{
+	"title": "ZonePivotGroups",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "Zone pivot group definitions schema",
+	"id": "https://github.com/dotnet/docfx/test/schemas/ZonePivotGroups.schema.json",
+	"type": "object",
+	"required": [
+		"groups"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"groups": {
+			"type": "array",
+			"items": {
+				"required": [
+					"id",
+					"title",
+					"prompt",
+					"pivots"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"title": {
+						"type": "string",
+						"tags": [
+							"localizable"
+						]
+					},
+					"prompt": {
+						"type": "string",
+						"tags": [
+							"localizable"
+						]
+					},
+					"pivots": {
+						"type": "array",
+						"minItems": 2,
+						"maxItems": 5,
+						"items": {
+							"required": [
+								"id",
+								"title"
+							],
+							"additionalProperties": false,
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string",
+									"tags": [
+										"localizable"
+									]
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

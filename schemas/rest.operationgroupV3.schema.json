@@ -1,0 +1,46 @@
+{
+	"title": "RESTOperationGroupV3",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for REST Operation Group page",
+	"id": "https://github.com/dotnet/docfx/schemas/rest.operationgroupV3.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"apiVersion": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string",
+			"mergeType": "key"
+		},
+		"operations": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"service": {
+			"type": "string"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"metadata": {
+			"type": "object"
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"name",
+		"summary"
+	]
+}

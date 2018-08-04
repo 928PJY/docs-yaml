@@ -1,0 +1,65 @@
+{
+	"title": "ODataIndex",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for OData index page",
+	"id": "https://github.com/dotnet/docfx/schemas/OData.index.schema.json",
+	"type": "object",
+	"properties": {
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"in_this_section": {
+			"items": {
+				"properties": {
+					"description": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					}
+				}
+			},
+			"type": "array"
+		},
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"name": {
+			"type": "string",
+			"tags": [
+				"localizable"
+			]
+		},
+		"title": {
+			"type": "string",
+			"tags": [
+				"localizable"
+			]
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"description",
+		"name"
+	]
+}

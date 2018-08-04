@@ -1,0 +1,100 @@
+{
+	"title": "Profile",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for a profile page.",
+	"id": "https://github.com/dotnet/docfx/schemas/profile.schema.json",
+	"type": "object",
+	"properties": {
+		"blog": {
+			"type": "string"
+		},
+		"facebook": {
+			"type": "string"
+		},
+		"github": {
+			"type": "string"
+		},
+		"image": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"alt": {
+					"description": "Image alternate text for accessibility purposes.",
+					"type": "string"
+				},
+				"src": {
+					"description": "Image profile.",
+					"type": "string"
+				}
+			}
+		},
+		"instagram": {
+			"type": "string"
+		},
+		"linkedin": {
+			"type": "string"
+		},
+		"location": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"lat": {
+					"type": "number"
+				},
+				"long": {
+					"type": "number"
+				},
+				"display": {
+					"type": "string"
+				}
+			},
+			"description": "The person's current location. One is a string value for display, while the other two are a pair of number coordinates."
+		},
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"name": {
+			"type": "string"
+		},
+		"podcast": {
+			"type": "string"
+		},
+		"summary": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"remarks": {
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"stackoverflow": {
+			"type": "string"
+		},
+		"tagline": {
+			"type": "string"
+		},
+		"twitter": {
+			"type": "string"
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		},
+		"website": {
+			"type": "string"
+		}
+	},
+	"metadata": "/metadata"
+}

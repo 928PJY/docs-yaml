@@ -1,0 +1,125 @@
+{
+	"title": "Tutorial",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for Tutorial",
+	"id": "https://github.com/dotnet/docfx/test/schemas/Tutorial.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"items",
+		"title"
+	],
+	"properties": {
+		"labUrl": {
+			"description": "Outside link to a hands-on-lab.",
+			"type": "string",
+			"contentType": "href"
+		},
+		"challenge": {
+			"type": "object",
+			"properties": {
+				"uid": {
+					"description": "Specifically not marked as contentType=uid but xref because this is a special object that cross-referencing some other file",
+					"type": "string",
+					"contentType": "xref"
+				},
+				"type": {
+					"type": "string",
+					"enum": [
+						"quiz"
+					]
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"uid",
+				"type"
+			]
+		},
+		"items": {
+			"type": "array",
+			"minItems": 2,
+			"items": {
+				"properties": {
+					"title": {
+						"type": "string",
+						"tags": [
+							"localizable"
+						]
+					},
+					"durationInMinutes": {
+						"type": "number"
+					},
+					"content": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					}
+				},
+				"additionalProperties": false,
+				"required": [
+					"content"
+				],
+				"type": "object"
+			}
+		},
+		"metadata": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				},
+				"description": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				},
+				"audience": {
+					"type": "string"
+				},
+				"level": {
+					"type": "string"
+				},
+				"interactive": {
+					"type": "string"
+				},
+				"nextTutorialHref": {
+					"type": "string",
+					"contentType": "href"
+				},
+				"nextTutorialTitle": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"required": [
+				"description",
+				"audience",
+				"level"
+			]
+		},
+		"title": {
+			"type": "string",
+			"tags": [
+				"localizable"
+			]
+		},
+		"uid": {
+			"type": "string",
+			"contentType": "uid"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"title"
+	]
+}

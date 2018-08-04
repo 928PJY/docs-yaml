@@ -1,0 +1,134 @@
+{
+	"title": "Module",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "A Triple Crown Module.",
+	"id": "https://github.com/dotnet/docfx/schemas/module.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"abstract",
+		"achievement",
+		"iconUrl",
+		"levels",
+		"products",
+		"roles",
+		"summary",
+		"title",
+		"uid",
+		"units"
+	],
+	"properties": {
+		"abstract": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"achievement": {
+			"type": "string",
+			"contentType": "xref"
+		},
+		"cardDescription": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"iconUrl": {
+			"type": "string",
+			"contentType": "href"
+		},
+		"levels": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string",
+				"enum": [
+					"beginner",
+					"intermediate",
+					"advanced"
+				]
+			}
+		},
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				},
+				"description": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"prerequisites": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"products": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string"
+			}
+		},
+		"roles": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string",
+				"enum": [
+					"developer",
+					"administrator",
+					"solutionsArchitect",
+					"businessUser",
+					"businessAnalyst"
+				]
+			}
+		},
+		"summary": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"title": {
+			"type": "string",
+			"tags": [
+				"localizable"
+			]
+		},
+		"uid": {
+			"type": "string",
+			"contentType": "uid"
+		},
+		"units": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			}
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"title",
+		"iconUrl",
+		"summary",
+		"cardDescription"
+	]
+}

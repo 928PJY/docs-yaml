@@ -1,0 +1,58 @@
+{
+    "name": "docs-yaml",
+    "displayName": "Docs-Yaml",
+    "description": "YAML Support for Visual Studio Code provided by Jiayin, support apply schema valdiation according to the YamlMime and snippets",
+    "version": "0.1.0",
+    "preview": true,
+    "publisher": "Gizmos",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "license": "MIT",
+    "categories": [
+        "Azure",
+        "Snippets",
+        "Programming Languages",
+        "Other"
+    ],
+    "keywords": [
+        "yaml",
+        "YamlMime",
+        "azure",
+        "docs"
+    ],
+    "icon": "images/logo.png",
+    "bugs": {
+        "url": "https://github.com/928PJY/docs-yaml/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/928PJY/docs-yaml"
+    },
+    "activationEvents": [
+        "onLanguage:yaml"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {},
+    "extensionDependencies": [
+        "redhat.vscode-yaml"
+    ],
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "fuzzysearch": "^1.0.3",
+        "js-yaml": "^3.8.2"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.32",
+        "@types/node": "^6.0.40",
+        "mocha": "^4.1.0",
+        "typescript": "^2.2.32",
+        "vscode": "^1.0.17"
+    }
+}

@@ -1,0 +1,73 @@
+{
+	"title": "Sample",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for sample page",
+	"id": "https://github.com/dotnet/docfx/schemas/sample.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"name",
+		"uid",
+		"author",
+		"languages",
+		"products"
+	],
+	"xrefProperties": [
+		"uid",
+		"summary"
+	],
+	"properties": {
+		"metadata": {
+			"properties": {},
+			"type": "object"
+		},
+		"azureDeployPath": {
+			"type": "string"
+		},
+		"author": {
+			"type": "string"
+		},
+		"codeUrl": {
+			"type": "string",
+			"contentType": "href"
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"languages": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"name": {
+			"type": "string"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"products": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"uid": {
+			"type": "string",
+			"contentType": "uid"
+		},
+		"zipUrl": {
+			"type": "string",
+			"contentType": "href"
+		}
+	}
+}

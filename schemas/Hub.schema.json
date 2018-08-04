@@ -1,0 +1,220 @@
+{
+    "title": "Hub",
+    "$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for Hub",
+    "id": "https://github.com/dotnet/docfx/test/schemas/Hub.schema.json",
+    "type": "object",
+    "properties": {
+		"abstract": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"aside": {
+					"properties": {
+						"image": {
+							"properties": {
+								"alt": {
+									"type": "string"
+								},
+								"height": {
+									"type": "number"
+								},
+								"src": {
+									"type": "string"
+								},
+								"width": {
+									"type": "number"
+								}
+							},
+							"type": "object"
+						},
+						"title": {
+							"type": "string",
+							"tags": [
+								"localizable"
+							]
+						},
+						"href": {
+							"type": "string"
+						},
+						"width": {
+							"type": "number"
+						}
+					},
+					"type": "object"
+				},
+				"menu": {
+					"properties": {
+						"items": {
+							"items": {
+								"properties": {
+									"href": {
+										"type": "string"
+									},
+									"text": {
+										"type": "string",
+										"tags": [
+											"localizable"
+										]
+									}
+								},
+								"type": "object"
+							},
+							"type": "array"
+						}	
+					},
+					"type": "object"
+				}
+			},
+			"type": "object"
+		},
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"sections": {
+			"items": {
+				"properties": {
+					"title": {
+						"type": "string",
+						"tags": [
+							"localizable"
+						]
+					},
+					"items": {
+						"items": {
+							"properties": {
+								"type": {
+									"type": "string"				
+								},
+								"style": {
+									"type": "string"				
+								},
+								"className": {
+									"type": "string"					
+								},
+								"columns": {
+									"type": "number"
+								},
+								"tableColumns": {
+									"items": {
+										"properties": {
+											"image": {
+												"properties": {
+													"src": {
+														"type": "string"
+													}
+												},
+												"type": "object"
+											}
+										},
+										"type": "object"
+									},
+									"type": "array"
+								},
+								"tableRows": {
+									"items": {
+										"properties": {
+											"title": {
+												"type": "string",
+												"tags": [
+													"localizable"
+												]
+											},
+											"values": {
+												"href": {
+													"type": "string"
+												},
+												"type": "array"
+											}
+										},
+										"type": "object"										
+									},
+									"type": "array"
+								},
+								"text": {
+									"type": "string",
+									"tags": [
+										"localizable"
+									]
+								},
+								"content": {
+									"type": "string",
+									"contentType": "markdown",
+									"tags": [
+										"localizable"
+									]
+								},
+								"items": {
+									"items": {
+										"properties": {
+											"title": {
+												"type": "string",
+												"tags": [
+													"localizable"
+												]
+											},
+											"content": {
+												"type": "string",
+												"contentType": "markdown",
+												"tags": [
+													"localizable"
+												]
+											},
+											"text": {
+												"type": "string",
+												"tags": [
+													"localizable"
+												]
+											},
+											"href": {
+												"type": "string"
+											},
+											"image": {
+												"properties": {
+													"src": {
+														"type": "string"
+													},
+													"href": {
+														"type": "string"
+													}
+												},
+												"type": "object"
+											}
+										},
+										"type": "object"
+									},
+									"type": "array"
+								}
+							},
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"title": {
+			"type": "string",
+			"tags": [
+				"localizable"
+			]
+		}
+	},
+	"metadata": "/metadata"
+}

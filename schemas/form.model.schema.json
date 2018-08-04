@@ -1,0 +1,53 @@
+{
+	"title": "FormModel",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "A model for creating dynamic forms.",
+	"id": "https://github.com/dotnet/docfx/schemas/form.model.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"inputs": {
+			"items": {
+				"additionalProperties": false,
+				"required": [
+					"type",
+					"name",
+					"isRequired",
+					"label",
+					"description"
+				],
+				"properties": {
+					"type": {
+						"type": "string",
+						"enum": [
+							"text",
+							"number",
+							"checkbox"
+						]
+					},
+					"name": {
+						"type": "string"
+					},
+					"isRequired": {
+						"type": "boolean"
+					},
+					"label": {
+						"type": "string",
+						"tags": [
+							"localizable"
+						]
+					},
+					"description": {
+						"type": "string",
+						"tags": [
+							"localizable"
+						]
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		}
+	}
+}

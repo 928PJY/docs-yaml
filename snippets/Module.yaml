@@ -1,0 +1,26 @@
+name: YamlMime Module
+label: YamlMime Module
+description: Create a Module
+body: |2
+  ### YamlMime:Module
+  # YML code for `module`
+  uid: ${1:uid}
+  # `uid`s are manually created by the writer and should follow the format <repo>.<module-short-name>. Keep it easy on yourself and keep the module-short-name the same as the module folder name.
+  title: ${2:title}
+  # `title` appears in the header, ToC, and breadcrumbs
+  summary: This is the summary of the ${3:title}
+  # `summary` appears at the top of the module page beneath the title
+  abstract: This is the abstract of the ${4:title}
+  # `abstract` appears on the module page beneath the summary and level/role/product metadata 
+  iconUrl: ${5:iconUrl}
+  # `iconUrl` is the badge image 
+  level: ${6|beginner,intermediate,advanced|}
+  # `beginner`, `intermediate`, `advanced`
+  role: ${7|developer,administrator,solutionsArchitect,businessUser,businessAnalyst|}
+  # `developer`, `administrator`, `solutionsArchitect`, `businessUser`, `businessAnalyst`
+  product: ${8:product}
+  units:
+  # `units` are lists of all of the unit uids, in the order they should be displayed to the user in
+  - ${9:unitItem}
+  achievement: ${10:achievement}
+  # `achievement` is the `uid` for the badge

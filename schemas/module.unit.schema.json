@@ -1,0 +1,245 @@
+{
+	"title": "ModuleUnit",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "A Triple Crown Module Unit.",
+	"id": "https://github.com/dotnet/docfx/schemas/module.unit.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"content",
+		"durationInMinutes",
+		"title",
+		"uid"
+	],
+	"properties": {
+		"content": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"durationInMinutes": {
+			"type": "number"
+		},
+		"interactive": {
+			"description": "Enum string describing the type of interactive content.",
+			"type": "string",
+			"enum": [
+				"cloudshell",
+				"cloudshellEditor",
+				"dotnet"
+			]
+		},
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				},
+				"description": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"required": [
+				"description"
+			],
+			"type": "object"
+		},
+		"quiz": {
+			"$ref": "#/definitions/quiz"
+		},
+		"tasks": {
+			"$ref": "#/definitions/tasks"
+		},
+		"title": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string"
+		},
+		"uid": {
+			"type": "string",
+			"contentType": "uid"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"title"
+	],
+	"definitions": {
+		"quiz": {
+			"title": "Quiz to check",
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"questions"
+			],
+			"properties": {
+				"questions": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"additionalProperties": false,
+						"required": [
+							"choices",
+							"content"
+						],
+						"properties": {
+							"choices": {
+								"type": "array",
+								"minItems": 2,
+								"items": {
+									"type": "object",
+									"additionalProperties": false,
+									"required": [
+										"content",
+										"isCorrect"
+									],
+									"properties": {
+										"content": {
+											"type": "string",
+											"contentType": "markdown",
+											"tags": [
+												"localizable"
+											]
+										},
+										"correctExplanation": {
+											"type": "string",
+											"contentType": "markdown",
+											"tags": [
+												"localizable"
+											]
+										},
+										"incorrectExplanation": {
+											"type": "string",
+											"contentType": "markdown",
+											"tags": [
+												"localizable"
+											]
+										},
+										"isCorrect": {
+											"type": "boolean"
+										}
+									}
+								}
+							},
+							"content": {
+								"type": "string",
+								"contentType": "markdown",
+								"tags": [
+									"localizable"
+								]
+							}
+						}
+					}
+				},
+				"title": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				}
+			}
+		},
+		"tasks": {
+			"title": "Tasks to validate",
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": [
+					"action",
+					"environment"
+				],
+				"properties": {
+					"action": {
+						"type": "string",
+						"enum": [
+							"exists",
+							"not-exists"
+						]
+					},
+					"environment": {
+						"type": "string",
+						"enum": [
+							"azure"
+						]
+					},
+					"hint": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"azure": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"resourceGroup": {
+								"type": "string"
+							},
+							"properties": {
+								"type": "object"
+							},
+							"location": {
+								"type": "string"
+							},
+							"tags": {
+								"type": "object"
+							},
+							"resource": {
+								"title": "Azure resource for validation",
+								"type": "object",
+								"description": "azure resource sechema is according to the schema defined in https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-templates-resources",
+								"required": [
+									"type",
+									"name"
+								],
+								"properties": {
+									"type": {
+										"type": "string"
+									},
+									"name": {
+										"type": "string"
+									},
+									"location": {
+										"type": "string"
+									},
+									"tags": {
+										"type": "object"
+									},
+									"sku": {
+										"type": "object"
+									},
+									"kind": {
+										"type": "string"
+									},
+									"properties": {
+										"type": "object"
+									},
+									"plan": {
+										"type": "object"
+									},
+									"managedBy": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

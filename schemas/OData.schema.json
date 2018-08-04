@@ -1,0 +1,648 @@
+{
+	"title": "OData",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for OData page",
+	"id": "https://github.com/dotnet/docfx/schemas/OData.schema.json",
+	"type": "object",
+	"properties": {
+		"actions": {
+			"description": "actions included in solutions",
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"action_items": {
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string"
+							}
+						}
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"bound_entities": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"bound_entity_items": {
+					"items": {
+						"properties": {
+							"entity_type": {
+								"type": "string",
+								"contentType": "xref"
+							},
+							"binding_type": {
+								"type": "string"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"collection_valued_navigation_properties": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"property_items": {
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string",
+								"contentType": "markdown",
+								"tags": [
+									"localizable"
+								]
+							},
+							"name": {
+								"type": "string"
+							},
+							"partner": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string",
+								"contentType": "xref"
+							},
+							"iscollection": {
+								"type": "boolean"
+							},
+							"nullable": {
+								"type": "boolean"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"compositionType": {
+			"type": "string",
+			"enum": [
+				"query",
+				"select"
+			]
+		},
+		"derived_types": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"derived_type_items": {
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string"
+							}
+						}
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"entities": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"entity_items": {
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string"
+							},
+							"displayName": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string"
+							}
+						}
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"header": {
+			"properties": {
+				"base_type": {
+					"type": "string",
+					"description": "this field is used for EntityType, it's the base type of the current EntityType",
+					"contentType": "xref"
+				},
+				"primary_key": {
+					"description": "primary key of the entitytype",
+					"type": "string"
+				},
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"iscomposable": {
+					"type": "boolean"
+				},
+				"entity_set_path": {
+					"type": "string"
+				},
+				"display_name": {
+					"type": "string"
+				},
+				"unique_name": {
+					"type": "string"
+				},
+				"version": {
+					"type": "string"
+				},
+				"customization_prefix": {
+					"type": "string"
+				},
+				"primary_name_attribute": {
+					"type": "string"
+				},
+				"operations_supported": {
+					"items": {
+						"description": "Examples: POST,GET,PATCH,DELETE,...",
+						"type": "string",
+						"enum": [
+							"GET",
+							"GET (Retrieve Only)",
+							"GET (RetrieveMultiple Only)",
+							"POST",
+							"PUT",
+							"DELETE",
+							"PATCH"
+						]
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"isbound": {
+			"type": "boolean"
+		},
+		"hasparameters": {
+			"type": "boolean"
+		},
+		"hasreturnvalue": {
+			"type": "boolean"
+		},
+		"href_see_also": {
+			"items": {
+				"description": "the reference link should not be xref",
+				"properties": {
+					"text": {
+						"type": "string",
+						"tags": [
+							"localizable"
+						]
+					},
+					"href": {
+						"type": "string",
+						"contentType": "href"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"lookup_properties": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"property_items": {
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string",
+								"tags": [
+									"localizable"
+								]
+							},
+							"name": {
+								"type": "string"
+							},
+							"single_valued_navigation_property": {
+								"items": {
+									"type": "string"
+								},
+								"type": "array"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"name": {
+			"description": "the short name of this entity, for example: Microsoft.Dynamics.CRM.AddToQueue may named as AddToQueue",
+			"type": "string"
+		},
+		"namespace": {
+			"description": "the namespace of current document",
+			"type": "string"
+		},
+		"members": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"member_items": {
+					"description": "members of the enumtype",
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string",
+								"tags": [
+									"localizable"
+								]
+							},
+							"name": {
+								"type": "string"
+							},
+							"value": {
+								"type": "integer"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"operations": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"operation_items": {
+					"items": {
+						"properties": {
+							"name": {
+								"type": "string",
+								"contentType": "xref"
+							},
+							"binding_type": {
+								"type": "string"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"owningsolution": {
+			"contentType": "xref",
+			"type": "string"
+		},
+		"parameters": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"parameter_items": {
+					"description": "parameters of the action/function",
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string",
+								"tags": [
+									"localizable"
+								]
+							},
+							"name": {
+								"type": "string"
+							},
+							"nullable": {
+								"type": "boolean"
+							},
+							"iscollection": {
+								"type": "boolean"
+							},
+							"type": {
+								"contentType": "xref",
+								"type": "string"
+							},
+							"unicode": {
+								"type": "boolean"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"properties": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"property_items": {
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string",
+								"tags": [
+									"localizable"
+								]
+							},
+							"isreadonly": {
+								"type": "boolean"
+							},
+							"iscollection": {
+								"type": "boolean"
+							},
+							"nullable": {
+								"type": "boolean"
+							},
+							"iscomputed": {
+								"type": "boolean"
+							},
+							"unicode": {
+								"type": "boolean"
+							},
+							"name": {
+								"type": "string"
+							},
+							"display_name": {
+								"type": "string"
+							},
+							"options": {
+								"items": {
+									"properties": {
+										"value": {
+											"type": "integer"
+										},
+										"label": {
+											"type": "string"
+										}
+									},
+									"type": "object"
+								},
+								"type": "array"
+							},
+							"type": {
+								"type": "string",
+								"contentType": "xref"
+							},
+							"inherited_from": {
+								"type": "string",
+								"contentType": "xref"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"remarks": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"return_type": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				},
+				"nullable": {
+					"type": "boolean"
+				},
+				"iscollection": {
+					"type": "boolean"
+				},
+				"type": {
+					"type": "string",
+					"contentType": "xref"
+				}
+			},
+			"type": "object"
+		},
+		"single_valued_navigation_properties": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"property_items": {
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string",
+								"contentType": "markdown",
+								"tags": [
+									"localizable"
+								]
+							},
+							"name": {
+								"type": "string"
+							},
+							"partner": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string",
+								"contentType": "xref"
+							},
+							"iscollection": {
+								"type": "boolean"
+							},
+							"nullable": {
+								"type": "boolean"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"solutions": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"solution_items": {
+					"items": {
+						"properties": {
+							"description": {
+								"type": "string"
+							},
+							"type": {
+								"type": "string"
+							}
+						}
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"syntax_example": {
+			"type": "string"
+		},
+		"type": {
+			"description": "current documenttype: EntityType/Action/Function...",
+			"type": "string",
+			"enum": [
+				"entitytype",
+				"function",
+				"action",
+				"complextype",
+				"enumtype",
+				"metadataentitytype",
+				"queryfunction",
+				"solution"
+			]
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		},
+		"usedby": {
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"usedby_items": {
+					"items": {
+						"properties": {
+							"name": {
+								"type": "string",
+								"contentType": "xref"
+							},
+							"used_as": {
+								"type": "string"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"xref_see_also": {
+			"items": {
+				"description": "the reference link should be xref",
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"description",
+		"remarks",
+		"name",
+		"type"
+	]
+}

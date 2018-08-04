@@ -1,0 +1,206 @@
+{
+	"title": "PowershellCmdlet",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for powershell cmdlet page",
+	"id": "https://github.com/dotnet/docfx/schemas/powershell.cmdlet.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"name",
+		"module",
+		"uid"
+	],
+	"properties": {
+		"metadata": {
+			"properties": {},
+			"type": "object"
+		},
+		"applicable": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"examples": {
+			"items": {
+				"properties": {
+					"title": {
+						"type": "string"
+					},
+					"summary": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"code": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"inputs": {
+			"items": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"links": {
+			"items": {
+				"properties": {
+					"href": {
+						"type": "string",
+						"contentType": "href"
+					},
+					"text": {
+						"type": "string"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"module": {
+			"type": "string",
+			"contentType": "xref"
+		},
+		"name": {
+			"type": "string"
+		},
+		"notes": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"outputs": {
+			"items": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"parameters": {
+			"items": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"summary": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"isRequired": {
+						"type": "boolean"
+					},
+					"applicable": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"type": {
+						"type": "string"
+					},
+					"aliases": {
+						"type": "string"
+					},
+					"parameterValueGroup": {
+						"type": "string"
+					},
+					"position": {
+						"type": "string"
+					},
+					"defaultValue": {
+						"type": "string"
+					},
+					"pipelineInput": {
+						"type": "boolean"
+					},
+					"acceptWildcardCharacters": {
+						"type": "boolean"
+					},
+					"valueFrom": {
+						"type": "string"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"syntaxes": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"uid": {
+			"type": "string",
+			"contentType": "uid"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"name",
+		"summary"
+	]
+}

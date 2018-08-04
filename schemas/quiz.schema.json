@@ -1,0 +1,87 @@
+{
+	"title": "Quiz",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "A Triple Crown Quiz.",
+	"id": "https://github.com/dotnet/docfx/schemas/quiz.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"uid",
+		"title",
+		"questions"
+	],
+	"xrefProperties": ["title", "description"],
+	"properties": {
+		"uid": {
+			"type": "string",
+			"contentType": "uid",
+			"tags": [
+				"patterned:uid"
+			]
+		},
+		"title": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"questions": {
+			"items": {
+				"additionalProperties": false,
+				"required": [
+					"content",
+					"choices"
+				],
+				"properties": {
+					"content": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"choices": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"additionalProperties": false,
+							"required": [
+								"content"
+							],
+							"properties": {
+								"content": {
+									"type": "string",
+									"contentType": "markdown",
+									"tags": [
+										"localizable"
+									]
+								},
+								"incorrectExplanation": {
+									"type": "string",
+									"contentType": "markdown",
+									"tags": [
+										"localizable"
+									]
+								},
+								"correctExplanation": {
+									"type": "string",
+									"contentType": "markdown",
+									"tags": [
+										"localizable"
+									]
+								},
+								"isCorrect": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		}
+	}
+}

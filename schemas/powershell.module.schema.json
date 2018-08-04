@@ -1,0 +1,41 @@
+{
+	"title": "PowershellModule",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for powershell module page",
+	"id": "https://github.com/dotnet/docfx/schemas/powershell.module.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"name",
+		"uid"
+	],
+	"properties": {
+		"metadata": {
+			"properties": {},
+			"type": "object"
+		},
+		"cmdlets": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"name": {
+			"type": "string"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"uid": {
+			"type": "string",
+			"contentType": "uid"
+		}
+	},
+	"metadata": "/metadata"
+}

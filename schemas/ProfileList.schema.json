@@ -1,0 +1,141 @@
+{
+	"title": "ProfileList",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for the Profile List page",
+	"id": "https://github.com/dotnet/docfx/schemas/ProfileList.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"bannerLinks": {
+			"description": "The list of links to be used in the benner. Maximum three items.",
+			"items": {
+				"properties": {
+					"text": {
+						"description": "The display text of the banner link.",
+						"type": "string",
+						"tags": [
+							"localizable"
+						]
+					},
+					"url": {
+						"description": "The destination URL of the banner hyperlink.",
+						"type": "string"
+					}
+				}
+			},
+			"type": "array"
+		},
+		"mode": {
+			"type": "string",
+			"enum": [
+				"map",
+				"list"
+			]
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"filterText": {
+			"type": "string",
+			"tags": [
+				"localizable"
+			]
+		},
+		"focalImage": {
+			"description": "Main image for the page, typically includes cute racoons.",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"alt": {
+					"description": "Image alternate text for accessibility purposes.",
+					"type": "string"
+				},
+				"src": {
+					"description": "Image URI for main page image.",
+					"type": "string"
+				}
+			}
+		},
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"profiles": {
+			"items": {
+				"additionalProperties": false,
+				"properties": {
+					"image": {
+						"description": "Profile image.",
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"alt": {
+								"description": "Image alternate text for accessibility purposes.",
+								"type": "string"
+							},
+							"src": {
+								"description": "Image URI for profile page photo.",
+								"type": "string"
+							}
+						}
+					},
+					"location": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"lat": {
+								"type": "number"
+							},
+							"long": {
+								"type": "number"
+							},
+							"display": {
+								"type": "string"
+							}
+						},
+						"description": "The person's current location. One is a string value for display, while the other two are a pair of number coordinates."
+					},
+					"name": {
+						"description": "The person's name.",
+						"type": "string"
+					},
+					"tagline": {
+						"description": "The profile list tagline.",
+						"type": "string"
+					},
+					"title": {
+						"description": "The page title.",
+						"type": "string"
+					},
+					"twitter": {
+						"description": "The person's Twitter handle without the leading '@', ex. twitter_handle",
+						"type": "string"
+					},
+					"uid": {
+						"type": "string"
+					}
+				}
+			},
+			"type": "array"
+		},
+		"title": {
+			"type": "string",
+			"tags": [
+				"localizable"
+			]
+		}
+	},
+	"metadata": "/metadata"
+}

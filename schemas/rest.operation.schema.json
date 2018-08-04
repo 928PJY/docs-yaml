@@ -1,0 +1,580 @@
+{
+	"title": "RESTOperation",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for REST Operation page",
+	"id": "https://github.com/dotnet/docfx/schemas/rest.operation.schema.json",
+	"type": "object",
+	"properties": {
+		"apiVersion": {
+			"type": "string"
+		},
+		"consumes": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"definitions": {
+			"items": {
+				"properties": {
+					"name": {
+						"type": "string",
+						"mergeType": "key"
+					},
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"kind": {
+						"type": "string",
+						"enum": [
+							"enum",
+							"object"
+						]
+					},
+					"properties": {
+						"items": {
+							"properties": {
+								"description": {
+									"type": "string",
+									"contentType": "markdown",
+									"tags": [
+										"localizable"
+									]
+								},
+								"name": {
+									"type": "string",
+									"mergeType": "key"
+								},
+								"types": {
+									"items": {
+										"properties": {
+											"uid": {
+												"type": "string"
+											},
+											"isArray": {
+												"type": "boolean"
+											},
+											"isDictionary": {
+												"type": "boolean"
+											},
+											"additionalTypes": {
+												"items": {
+													"properties": {
+														"uid": {
+															"type": "string"
+														}
+													},
+													"type": "object"
+												},
+												"type": "array"
+											}
+										},
+										"type": "object"
+									},
+									"type": "array"
+								},
+								"format": {
+									"type": "string"
+								},
+								"typesTitle": {
+									"type": "string"
+								},
+								"pattern": {
+									"type": "string"
+								}
+							},
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"examples": {
+			"items": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"request": {
+						"properties": {
+							"uri": {
+								"type": "string"
+							},
+							"headers": {
+								"items": {
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"value": {
+											"type": "string"
+										}
+									},
+									"type": "object"
+								},
+								"type": "array"
+							},
+							"body": {
+								"type": "string"
+							}
+						},
+						"type": "object"
+					},
+					"responses": {
+						"items": {
+							"properties": {
+								"statusCode": {
+									"type": "string"
+								},
+								"headers": {
+									"items": {
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"value": {
+												"type": "string"
+											}
+										},
+										"type": "object"
+									},
+									"type": "array"
+								},
+								"body": {
+									"type": "string"
+								}
+							},
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"groupName": {
+			"type": "string"
+		},
+		"isDeprecated": {
+			"type": "boolean"
+		},
+		"isPreview": {
+			"type": "boolean"
+		},
+		"metadata": {
+			"properties": {
+				"ms.sourcegitcommit": {
+					"type": "string"
+				},
+				"ms.openlocfilehash": {
+					"type": "string"
+				},
+				"ms.translationtype": {
+					"type": "string"
+				},
+				"ms.lasthandoff": {
+					"type": "string"
+				},
+				"ms.contentlocale": {
+					"type": "string"
+				},
+				"ms.locfileid": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		},
+		"name": {
+			"type": "string"
+		},
+		"paths": {
+			"items": {
+				"properties": {
+					"content": {
+						"type": "string"
+					},
+					"isOptional": {
+						"type": "boolean"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"produces": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"requestBody": {
+			"items": {
+				"properties": {
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"name": {
+						"type": "string",
+						"mergeType": "key"
+					},
+					"parameters": {
+						"items": {
+							"properties": {
+								"description": {
+									"type": "string",
+									"contentType": "markdown",
+									"tags": [
+										"localizable"
+									]
+								},
+								"name": {
+									"type": "string",
+									"mergeType": "key"
+								},
+								"types": {
+									"items": {
+										"properties": {
+											"uid": {
+												"type": "string"
+											},
+											"isArray": {
+												"type": "boolean"
+											},
+											"isDictionary": {
+												"type": "boolean"
+											},
+											"additionalTypes": {
+												"items": {
+													"properties": {
+														"uid": {
+															"type": "string"
+														}
+													},
+													"type": "object"
+												},
+												"type": "array"
+											}
+										},
+										"type": "object"
+									},
+									"type": "array"
+								},
+								"format": {
+									"type": "string"
+								},
+								"typesTitle": {
+									"type": "string"
+								},
+								"isRequired": {
+									"type": "boolean"
+								},
+								"pattern": {
+									"type": "string"
+								}
+							},
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"requestHeader": {
+			"items": {
+				"properties": {
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"in": {
+						"type": "string",
+						"enum": [
+							"query",
+							"header"
+						]
+					},
+					"name": {
+						"type": "string",
+						"mergeType": "key"
+					},
+					"types": {
+						"items": {
+							"properties": {
+								"uid": {
+									"type": "string"
+								},
+								"isArray": {
+									"type": "boolean"
+								},
+								"isDictionary": {
+									"type": "boolean"
+								},
+								"additionalTypes": {
+									"items": {
+										"properties": {
+											"uid": {
+												"type": "string"
+											}
+										},
+										"type": "object"
+									},
+									"type": "array"
+								}
+							},
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"format": {
+						"type": "string"
+					},
+					"typesTitle": {
+						"type": "string"
+					},
+					"isRequired": {
+						"type": "boolean"
+					},
+					"pattern": {
+						"type": "string"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"responses": {
+			"items": {
+				"properties": {
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"name": {
+						"type": "string",
+						"mergeType": "key"
+					},
+					"types": {
+						"items": {
+							"properties": {
+								"uid": {
+									"type": "string"
+								},
+								"isArray": {
+									"type": "boolean"
+								},
+								"isDictionary": {
+									"type": "boolean"
+								},
+								"additionalTypes": {
+									"items": {
+										"properties": {
+											"uid": {
+												"type": "string"
+											}
+										},
+										"type": "object"
+									},
+									"type": "array"
+								}
+							},
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"format": {
+						"type": "string"
+					},
+					"typesTitle": {
+						"type": "string"
+					},
+					"pattern": {
+						"type": "string"
+					},
+					"headers": {
+						"items": {
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"value": {
+									"type": "string"
+								}
+							},
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"security": {
+			"items": {
+				"properties": {
+					"type": {
+						"type": "string",
+						"enum": [
+							"basic",
+							"apiKey",
+							"oauth2"
+						]
+					},
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"name": {
+						"type": "string"
+					},
+					"in": {
+						"type": "string",
+						"enum": [
+							"query",
+							"header"
+						]
+					},
+					"flow": {
+						"type": "string",
+						"enum": [
+							"implicit",
+							"password",
+							"application",
+							"accessCode"
+						]
+					},
+					"authorizationUrl": {
+						"type": "string"
+					},
+					"tokenUrl": {
+						"type": "string"
+					},
+					"scopes": {
+						"items": {
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"description": {
+									"type": "string"
+								}
+							}
+						},
+						"type": "array"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"service": {
+			"description": "service",
+			"type": "string"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		},
+		"uriParameters": {
+			"items": {
+				"properties": {
+					"description": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					},
+					"in": {
+						"type": "string",
+						"enum": [
+							"path",
+							"query"
+						]
+					},
+					"name": {
+						"type": "string",
+						"mergeType": "key"
+					},
+					"isRequired": {
+						"type": "boolean"
+					},
+					"types": {
+						"items": {
+							"properties": {
+								"uid": {
+									"type": "string"
+								},
+								"isArray": {
+									"type": "boolean"
+								},
+								"isDictionary": {
+									"type": "boolean"
+								},
+								"additionalTypes": {
+									"items": {
+										"properties": {
+											"uid": {
+												"type": "string"
+											}
+										},
+										"type": "object"
+									},
+									"type": "array"
+								}
+							},
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"format": {
+						"type": "string"
+					},
+					"typesTitle": {
+						"type": "string"
+					},
+					"pattern": {
+						"type": "string"
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"name"
+	]
+}

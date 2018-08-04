@@ -1,0 +1,76 @@
+{
+	"title": "QSharpNamespace",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for QSharpNamespace page",
+	"id": "https://github.com/dotnet/docfx/schemas/qsharp.namespace.schema.json",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"functions": {
+			"items": {
+				"$ref": "#/definitions/typeSummary"
+			},
+			"type": "array"
+		},
+		"newtypes": {
+			"items": {
+				"$ref": "#/definitions/typeSummary"
+			},
+			"type": "array"
+		},
+		"operations": {
+			"items": {
+				"$ref": "#/definitions/typeSummary"
+			},
+			"type": "array"
+		},
+		"primitives": {
+			"items": {
+				"$ref": "#/definitions/typeSummary"
+			},
+			"type": "array"
+		},
+		"remarks": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"definitions": {
+		"typeSummary": {
+			"properties": {
+				"summary": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"uid": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		}
+	},
+	"xrefProperties": [
+		"name",
+		"summary"
+	]
+}

@@ -1,0 +1,89 @@
+{
+	"title": "NetDelegate",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for NetDelegate page",
+	"id": "https://github.com/dotnet/docfx/schemas/net.delegate.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"name",
+		"uid"
+	],
+	"properties": {
+		"metadata": {
+			"properties": {},
+			"type": "object"
+		},
+		"altCompliant": {
+			"type": "string",
+			"contentType": "xref"
+		},
+		"assemblies": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"examples": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"inheritances": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"isDeprecated": {
+			"type": "boolean"
+		},
+		"name": {
+			"type": "string"
+		},
+		"namespace": {
+			"type": "string",
+			"contentType": "xref"
+		},
+		"isNotClsCompliant": {
+			"type": "boolean"
+		},
+		"seeAlso": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"syntax": {
+			"type": "string"
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"name",
+		"summary"
+	]
+}

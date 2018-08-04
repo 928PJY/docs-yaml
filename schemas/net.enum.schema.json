@@ -1,0 +1,135 @@
+{
+	"title": "NetEnum",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for NetEnum page",
+	"id": "https://github.com/dotnet/docfx/schemas/net.enum.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"name",
+		"uid"
+	],
+	"properties": {
+		"metadata": {
+			"properties": {},
+			"type": "object"
+		},
+		"assemblies": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"attributes": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"examples": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"fields": {
+			"items": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"literalValue": {
+						"type": "number"
+					},
+					"summary": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"flagsAttributeText": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"inheritances": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"isDeprecated": {
+			"type": "boolean"
+		},
+		"name": {
+			"type": "string"
+		},
+		"namespace": {
+			"type": "string",
+			"contentType": "xref"
+		},
+		"seeAlso": {
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			},
+			"type": "array"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"syntax": {
+			"type": "string"
+		},
+		"threadSafety": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"threadSafetyInfo": {
+			"properties": {
+				"isSupported": {
+					"type": "boolean"
+				},
+				"memberScope": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"name",
+		"summary"
+	]
+}

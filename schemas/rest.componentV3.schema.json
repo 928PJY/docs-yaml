@@ -1,0 +1,173 @@
+{
+	"title": "RESTComponentV3",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for REST Component page",
+	"id": "https://github.com/dotnet/docfx/schemas/rest.componentV3.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"name": {
+			"type": "string",
+			"mergeType": "key"
+		},
+		"apiVersion": {
+			"type": "string"
+		},
+		"service": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"operations": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"relationships": {
+			"items": {
+				"$ref": "#/definitions/relationshipItem"
+			},
+			"type": "array"
+		},
+		"properties": {
+			"items": {
+				"$ref": "#/definitions/bodyProperty"
+			},
+			"type": "array"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"example": {
+			"type": "string"
+		},
+		"metadata": {
+			"type": "object"
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"definitions": {
+		"bodyProperty": {
+			"additionalProperties": false,
+			"properties": {
+				"description": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"name": {
+					"type": "string",
+					"mergeType": "key"
+				},
+				"isReadyOnly": {
+					"type": "boolean"
+				},
+				"isRequired": {
+					"type": "boolean"
+				},
+				"isNullable": {
+					"type": "boolean"
+				},
+				"isDeprecated": {
+					"type": "boolean"
+				},
+				"typesTitle": {
+					"type": "string"
+				},
+				"pattern": {
+					"type": "string"
+				},
+				"format": {
+					"type": "string"
+				},
+				"isAnyOf": {
+					"type": "boolean"
+				},
+				"isOneOf": {
+					"type": "boolean"
+				},
+				"types": {
+					"items": {
+						"$ref": "#/definitions/restType"
+					},
+					"type": "array"
+				}
+			}
+		},
+		"restType": {
+			"additionalProperties": false,
+			"properties": {
+				"uid": {
+					"type": "string"
+				},
+				"isArray": {
+					"type": "boolean"
+				},
+				"kind": {
+					"type": "string"
+				},
+				"enumValues": {
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				"isDictionary": {
+					"type": "boolean"
+				},
+				"additionalTypes": {
+					"items": {
+						"additionalProperties": false,
+						"properties": {
+							"uid": {
+								"type": "string"
+							}
+						},
+						"type": "object"
+					},
+					"type": "array"
+				},
+				"properties": {
+					"items": {
+						"$ref": "#/definitions/bodyProperty"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"relationshipItem": {
+			"additionalProperties": false,
+			"properties": {
+				"key": {
+					"type": "string"
+				},
+				"operation": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		}
+	},
+	"metadata": "/metadata",
+	"xrefProperties": [
+		"name",
+		"summary"
+	]
+}

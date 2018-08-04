@@ -1,0 +1,161 @@
+{
+	"title": "QSharpType",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "The schema for QSharpType page",
+	"id": "https://github.com/dotnet/docfx/schemas/qsharp.type.schema.json",
+	"type": "object",
+	"properties": {
+		"examples": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"functors": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"input": {
+			"$ref": "#/definitions/tupleDisplay"
+		},
+		"name": {
+			"type": "string"
+		},
+		"namespace": {
+			"type": "string"
+		},
+		"output": {
+			"$ref": "#/definitions/tupleDisplay"
+		},
+		"references": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"remarks": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"seeAlso": {
+			"items": {
+				"type": "string"
+			},
+			"type": "array"
+		},
+		"summary": {
+			"type": "string",
+			"contentType": "markdown",
+			"tags": [
+				"localizable"
+			]
+		},
+		"syntax": {
+			"type": "string"
+		},
+		"type": {
+			"type": "string",
+			"enum": [
+				"operation",
+				"function",
+				"newtype",
+				"primitive"
+			]
+		},
+		"typeParameters": {
+			"items": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"summary": {
+						"type": "string",
+						"contentType": "markdown",
+						"tags": [
+							"localizable"
+						]
+					}
+				},
+				"type": "object"
+			},
+			"type": "array"
+		},
+		"uid": {
+			"contentType": "uid",
+			"type": "string"
+		}
+	},
+	"definitions": {
+		"tupleDisplay": {
+			"properties": {
+				"content": {
+					"type": "string"
+				},
+				"types": {
+					"items": {
+						"$ref": "#/definitions/tupleType"
+					},
+					"type": "array"
+				}
+			},
+			"type": "object"
+		},
+		"tupleType": {
+			"properties": {
+				"functors": {
+					"items": {
+						"type": "string"
+					},
+					"type": "array"
+				},
+				"input": {
+					"$ref": "#/definitions/tupleDisplay"
+				},
+				"isArray": {
+					"type": "boolean"
+				},
+				"isFunction": {
+					"type": "boolean"
+				},
+				"isOperation": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				},
+				"output": {
+					"$ref": "#/definitions/tupleDisplay"
+				},
+				"summary": {
+					"type": "string",
+					"contentType": "markdown",
+					"tags": [
+						"localizable"
+					]
+				},
+				"types": {
+					"items": {
+						"$ref": "#/definitions/tupleType"
+					},
+					"type": "array"
+				},
+				"uid": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		}
+	},
+	"xrefProperties": [
+		"name",
+		"summary"
+	]
+}

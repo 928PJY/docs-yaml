@@ -1,0 +1,120 @@
+{
+	"title": "LearningPath",
+	"$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
+	"version": "1.0.0",
+	"description": "A Triple Crown Learning Path.",
+	"id": "https://github.com/dotnet/docfx/schemas/learning.path.schema.json",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"achievement",
+		"iconUrl",
+		"levels",
+		"modules",
+		"products",
+		"roles",
+		"summary",
+		"title",
+		"uid"
+	],
+	"properties": {
+		"achievement": {
+			"type": "string",
+			"contentType": "xref"
+		},
+		"cardDescription": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"iconUrl": {
+			"type": "string",
+			"contentType": "href"
+		},
+		"levels": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string",
+				"enum": [
+					"beginner",
+					"intermediate",
+					"advanced"
+				]
+			}
+		},
+		"metadata": {
+			"properties": {
+				"title": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				},
+				"description": {
+					"type": "string",
+					"tags": [
+						"localizable"
+					]
+				}
+			},
+			"type": "object"
+		},
+		"modules": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string",
+				"contentType": "xref"
+			}
+		},
+		"products": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string"
+			}
+		},
+		"prerequisites": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"roles": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string",
+				"enum": [
+					"developer",
+					"administrator",
+					"solutionsArchitect",
+					"businessUser",
+					"businessAnalyst"
+				]
+			}
+		},
+		"summary": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string",
+			"contentType": "markdown"
+		},
+		"title": {
+			"tags": [
+				"localizable"
+			],
+			"type": "string"
+		},
+		"uid": {
+			"type": "string",
+			"contentType": "uid"
+		}
+	},
+	"metadata": "/metadata"
+}
