@@ -1,7 +1,7 @@
 {
     "name": "docs-yaml",
-    "displayName": "Docs-Yaml",
-    "description": "YAML Support for Visual Studio Code provided by Jiayin, support apply schema valdiation according to the YamlMime and snippets",
+    "displayName": "docs-yaml",
+    "description": "YAML Support for Visual Studio Code, support for schema validation sccording to YamlMime, hover and auto completion",
     "version": "0.1.0",
     "preview": true,
     "publisher": "Gizmos",
@@ -21,7 +21,7 @@
         "azure",
         "docs"
     ],
-    "icon": "images/logo.png",
+    "icon": "images/docs-logo-ms.png",
     "bugs": {
         "url": "https://github.com/928PJY/docs-yaml/issues"
     },

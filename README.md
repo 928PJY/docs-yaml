@@ -1,11 +1,15 @@
 
 # Docs-YAML Support for Visual Studio Code
 
+[![Current Version](https://vsmarketplacebadge.apphb.com/version/Gizmos.docs-yaml.svg)](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
+[![Install Count](https://vsmarketplacebadge.apphb.com/installs/Gizmos.docs-yaml.svg)](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
+[![Open Issues](https://vsmarketplacebadge.apphb.com/rating/Gizmos.docs-yaml.svg) ](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
+
 Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-developer/yaml-language-server).
 
 ## Features
 
-![screencast](./images/docs-yaml-extension.gif)
+![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension.gif)
 
 1. YAML validation:
     * Apply schema validation according to the [YamlMime](#YamlMime)
