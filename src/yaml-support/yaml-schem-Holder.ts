@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as util from "./yaml-util";
+import * as vscode from 'vscode';
 
 export class DocsSchemaHolder {
     // The schemas definitions for Docs
@@ -36,6 +37,6 @@ export class DocsSchemaHolder {
     }
 
     private convertSchemaFilePath(schemaFilePath: string): string{
-        return "file:///" + path.join(path.dirname(this.configFilePath), schemaFilePath).replace(/\\/g, "/");
+        return vscode.Uri.file(path.join(path.dirname(this.configFilePath), schemaFilePath)).toString();
     }
 }

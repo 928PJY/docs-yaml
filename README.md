@@ -16,16 +16,17 @@ Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-
     * Detects errors such as:
         * Invalid property value type
         * Invalid child property
-        * Required node is missing
+        * Required property is missing
         * Unexpected property
 
 2. Auto completion:
-    * Auto completes on the YamlMime and supported node
-    * Supported nodes recommendation *if provided by schema*(<kbd>Ctrl</kbd> + <kbd>Space</kbd>)
-    * Enumerated node value recommendation *if provided by schema*
+    * Auto completes on the YamlMime and supported property
+    > **For now, the VSCode don't support auto-completion on a comment, so do not type `#` to get intellisense, just type `YamlMime` or YamlMime type.**
+    * Supported properties recommendation *if provided by schema*(<kbd>Ctrl</kbd> + <kbd>Space</kbd>)
+    * Enumerated property value recommendation *if provided by schema*
 
 3. Hover support:
-    * Hovering over a node shows description *if provided by schema*
+    * Hovering over a property shows description *if provided by schema*
 
 ## Extra Knowledge
 
