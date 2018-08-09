@@ -2,12 +2,6 @@ name: tasks
 label: tasks
 description: Create a `tasks` property in ModuleUnit
 body: |2
-  quiz:
-    title: ${0:title}
-    questions:
-    - content: ${1:content}
-      choices:
-      - content: ${2:content}
-        correctExplanation: ${3:correctExplanation}
-        incorrectExplanation: ${4:incorrectExplanation}
-        isCorrect: ${5|true,false|}
+  tasks:
+  - action: ${1|exists,not-exists|}
+    environment: ${2|azure|}

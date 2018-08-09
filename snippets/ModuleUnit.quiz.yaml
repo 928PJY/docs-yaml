@@ -2,6 +2,16 @@ name: quiz
 label: quiz
 description: Create a `quiz` property in ModuleUnit
 body: |2
-  task:
-  - action: ${0|exists,not-exists|}
-    environment: ${1|azure|}
+  quiz:
+    title: ${0:title}
+    questions:
+    - content: ${1:content}
+      choices:
+      - content: ${2:content}
+        correctExplanation: ${3:correctExplanation}
+        incorrectExplanation: ${4:incorrectExplanation}
+        isCorrect: ${5|true,false|}
+      - content: ${6:content}
+        correctExplanation: ${7:correctExplanation}
+        incorrectExplanation: ${8:incorrectExplanation}
+        isCorrect: ${9|true,false|}

@@ -1,6 +1,6 @@
 name: YamlMime Achievements
 label: YamlMime Achievements
-description: Create a Achievements YAML
+description: Create an Achievements YAML
 body: |2
   ### YamlMime:Achievements
   achievements:

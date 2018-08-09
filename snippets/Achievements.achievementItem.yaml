@@ -1,6 +1,6 @@
 name: achievement
 label: achievement
-description: Create a `achievement` item in Achievements
+description: Create an `achievement` item in Achievements
 body: |2
   - uid: ${1:uid}
     type: ${2|trophy,badge|}

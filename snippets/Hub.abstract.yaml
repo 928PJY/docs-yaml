@@ -1,6 +1,6 @@
 name: abstract
 label: abstract
-description: Create a `abstract` property in Hub
+description: Create an `abstract` property in Hub
 body: |2
   abstract:
     description: ${1:here is some description about abstract}

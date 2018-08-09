@@ -1,6 +1,6 @@
 name: item
 label: item
-description: Create a `item` item in Hub.abstract.menu.items
+description: Create an `item` item in Hub.abstract.menu.items
 body: |2
   - href: ${0:href}
     text: ${1:text}

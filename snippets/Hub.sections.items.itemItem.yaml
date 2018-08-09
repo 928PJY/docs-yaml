@@ -1,6 +1,6 @@
 name: item
 label: item
-description: Create a `item` item in Hub.sections.items
+description: Create an `item` item in Hub.sections.items
 body: |2
   - type: ${1:type}
     style: ${2:style}
