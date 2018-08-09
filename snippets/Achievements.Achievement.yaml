@@ -1,0 +1,9 @@
+name: Achievement
+label: Achievement
+description: Create a Achievement item in Achievements
+body: |2
+  - uid: ${1:uid}
+    type: ${2:type}
+    title: ${3:title}
+    summary: ${4:summary}
+    iconUrl: ${5:iconUrl}
