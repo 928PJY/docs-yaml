@@ -5,5 +5,5 @@ body: |2
   - name: ${1:name}
     href: ${2:href}
     items:
-      - name: ${3:name}
-        href: ${4:href}
+    - name: ${3:name}
+      href: ${4:href}
