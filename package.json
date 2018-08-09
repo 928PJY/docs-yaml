@@ -2,7 +2,7 @@
     "name": "docs-yaml",
     "displayName": "docs-yaml",
     "description": "YAML Support for Visual Studio Code, support for schema validation sccording to YamlMime, hover and auto completion",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "preview": true,
     "publisher": "Gizmos",
     "engines": {
