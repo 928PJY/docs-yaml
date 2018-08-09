@@ -2,11 +2,8 @@ name: TOC
 label: TOC
 description: TOC of array model
 body: |2
-  # A string name that is displayed for the TOC item. The name cannot include a colon (:).
   - name: ${1:name}
-  # The path the TOC item navigates to. Optional because items can exist just to parent other items.
     href: ${2:href}
-  # The children of the current TOC item. Optional for the leaf item in the TOC tree.
     items:
       - name: ${3:name}
         href: ${4:href}
