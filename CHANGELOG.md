@@ -1,5 +1,9 @@
 # Change Log
 
+## **0.1.4**
+
+- Update extension description
+
 ## **0.1.3**
 
 - Support snippets for TripleCrown schemas(Hub, Achievements, LearningPath, Module, ModuleUnit)
