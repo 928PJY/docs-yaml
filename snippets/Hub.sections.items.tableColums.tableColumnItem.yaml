@@ -1,0 +1,6 @@
+name: tableColumn
+label: tableColumn
+description: Create a `tableColumn` item in Hub.sections.items.tableColumns
+body: |2
+  - image:
+      src: ${1:src}

@@ -1,0 +1,23 @@
+name: YamlMime LearningPath
+label: YamlMime LearningPath
+description: Create a LearningPath YAML
+body: |2
+  ### YamlMime:LearningPath
+  uid: ${:uid}
+  title: ${:title}
+  summary: ${:summary}
+  roles:
+  - ${|developer,administrator,solutionsArchitect,businessUser,businessAnalyst|}
+  prerequisites: ${:prerequisites}
+  products:
+  - ${:product}
+  modules:
+  - ${:module}
+  metadata:
+    title: ${:title}
+    description: ${:description}
+  level:
+  - ${|beginner,intermediate,advanced|}
+  iconUrl: ${:iconUrl}
+  cardDescription: ${:cardDescription}
+  achievements: ${:achievements}

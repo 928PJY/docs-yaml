@@ -1,0 +1,7 @@
+name: quiz
+label: quiz
+description: Create a `quiz` property in ModuleUnit
+body: |2
+  task:
+  - action: ${0|exists,not-exists|}
+    environment: ${1|azure|}

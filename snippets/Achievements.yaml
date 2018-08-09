@@ -5,7 +5,7 @@ body: |2
   ### YamlMime:Achievements
   achievements:
   - uid: ${1:uid}
-    type: ${2:type}
+    type: ${2|trophy,badge|}
     title: ${3:title}
     summary: ${4:summary}
     iconUrl: ${5:iconUrl}
