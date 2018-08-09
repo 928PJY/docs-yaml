@@ -1,0 +1,11 @@
+name: item
+label: item
+description: Create an `item` item in Hub.sections.items.items
+body: |2
+  - title: ${1:title}
+    content: ${2:content}
+    text: ${3:text}
+    href: ${4:href}
+    image:
+      src: ${5:src}
+      href: ${6:href}

@@ -24,11 +24,13 @@
 				"localizable"
 			],
 			"type": "string",
-			"contentType": "markdown"
+			"contentType": "markdown",
+			"description": "`abstract` appears on the module page beneath the summary and level/role/product metadata "
 		},
 		"achievement": {
 			"type": "string",
-			"contentType": "xref"
+			"contentType": "xref",
+			"description": "`achievement` is the `uid` for the badge"
 		},
 		"cardDescription": {
 			"tags": [
@@ -39,7 +41,8 @@
 		},
 		"iconUrl": {
 			"type": "string",
-			"contentType": "href"
+			"contentType": "href",
+			"description": "`iconUrl` is the badge image "
 		},
 		"levels": {
 			"type": "array",
@@ -51,7 +54,8 @@
 					"intermediate",
 					"advanced"
 				]
-			}
+			},
+			"description": "`beginner`, `intermediate`, `advanced`"
 		},
 		"metadata": {
 			"properties": {
@@ -96,24 +100,28 @@
 					"businessUser",
 					"businessAnalyst"
 				]
-			}
+			},
+			"description": "`developer`, `administrator`, `solutionsArchitect`, `businessUser`, `businessAnalyst`"
 		},
 		"summary": {
 			"tags": [
 				"localizable"
 			],
 			"type": "string",
-			"contentType": "markdown"
+			"contentType": "markdown",
+			"description": "`summary` appears at the top of the module page beneath the title"
 		},
 		"title": {
 			"type": "string",
 			"tags": [
 				"localizable"
-			]
+			],
+			"description": "`title` appears in the header, ToC, and breadcrumbs"
 		},
 		"uid": {
 			"type": "string",
-			"contentType": "uid"
+			"contentType": "uid",
+			"description": "`uid`s are manually created by the writer and should follow the format <repo>.<module-short-name>. Keep it easy on yourself and keep the module-short-name the same as the module folder name."
 		},
 		"units": {
 			"type": "array",
@@ -121,7 +129,8 @@
 			"items": {
 				"type": "string",
 				"contentType": "xref"
-			}
+			},
+			"description": "`units` are lists of all of the unit uids, in the order they should be displayed to the user in"
 		}
 	},
 	"metadata": "/metadata",

@@ -135,8 +135,12 @@
 												]
 											},
 											"values": {
-												"href": {
-													"type": "string"
+												"items": {
+													"properties": {
+														"href": {
+															"type": "string"
+														}
+													}
 												},
 												"type": "array"
 											}

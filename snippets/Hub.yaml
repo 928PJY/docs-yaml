@@ -1,0 +1,8 @@
+name: YamlMime Hub
+label: YamlMime Hub
+description: Create a Hub YAML
+body: |2
+  ### YamlMime:Hub
+  title: ${1:title}
+  metadata:
+    title: ${2:title of metadata}

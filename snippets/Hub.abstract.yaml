@@ -1,0 +1,19 @@
+name: abstract
+label: abstract
+description: Create an `abstract` property in Hub
+body: |2
+  abstract:
+    description: ${1:here is some description about abstract}
+    aside:
+      image:
+        alt: ${2:alt}
+        height: ${3:0}
+        src: ${4:src}
+        width: ${5:0}
+      title: ${6:title}
+      href: ${7:href}
+      width: ${8:0}
+    menu:
+      items:
+      - href: ${9:href}
+        text: ${10:text}
