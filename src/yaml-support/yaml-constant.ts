@@ -13,4 +13,4 @@ export const TOC_SCHEMA_FILENAME = "toc.schema.json";
 
 export const TOC_SCHEMA_FILE = vscode.Uri.file(path.join(__dirname, `../../../schemas/${TOC_SCHEMA_FILENAME}`)).toString();
 
-export const TOC_FILE_GLOBAL_PATTERN = "toc.yml";
+export const TOC_FILE_GLOBAL_PATTERN = "/toc\\.yml/i";

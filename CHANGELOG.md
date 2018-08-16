@@ -1,5 +1,9 @@
 # Change Log
 
+## **0.1.5**
+
+- Support apply schema validation on toc.yml(case-insensitive file name)
+
 ## **0.1.4**
 
 - Update extension description
