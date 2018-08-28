@@ -1,5 +1,9 @@
 # Change Log
 
+## **0.1.6**
+
+- Use online schemas(excluding toc schema), do not need to udpate extension when the schemas changed.
+
 ## **0.1.5**
 
 - Support apply schema validation on toc.yml(case-insensitive file name)
