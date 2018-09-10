@@ -53,6 +53,15 @@
 			"description": "This property specifies whether the item should be expanded by default when the TOC is loaded. Only one root-level item can be expanded on load. The default value is false, so only add this with value true if you want the item to be expanded.",
 			"default": false
 		},
+		"testObject": {
+			"properties": {
+				"prop1":{
+					"type": "string"
+				}
+			},
+			"type": "object",
+			"description": "This is a test"
+		},
 		"tocItem": {
 			"properties": {
 				"name": {
@@ -75,6 +84,9 @@
 				},
 				"expanded": {
 					"$ref": "#/definitions/expanded"
+				},
+				"testObject": {
+					"$ref": "#/definitions/testObject"
 				},
 				"items": {
 					"type": "array",
