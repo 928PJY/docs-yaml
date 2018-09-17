@@ -1,5 +1,9 @@
 # Change Log
 
+## **0.1.7**
+
+- Update README file and snippets.
+
 ## **0.1.6**
 
 - Use online schemas(excluding toc schema), do not need to udpate extension when the schemas changed.

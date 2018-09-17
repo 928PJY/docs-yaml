@@ -9,24 +9,30 @@ Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-
 
 ## Features
 
-![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension.gif)
-
 1. YAML validation:
     * Apply schema validation according to the [YamlMime](#YamlMime)
     * Detects errors such as:
         * Invalid property value type
-        * Invalid child property
+        * Out of enum scope
         * Required property is missing
         * Unexpected property
 
+    ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-validation.gif)
+
 2. Auto completion:
-    * Auto completes on the YamlMime and supported property
+    * Generate input tempalte for whole yaml file
     > **For now, the VSCode don't support auto-completion on a comment, so do not type `#` to get intellisense, just type `YamlMime` or YamlMime type.**
-    * Supported properties recommendation *if provided by schema*(<kbd>Ctrl</kbd> + <kbd>Space</kbd>)
-    * Enumerated property value recommendation *if provided by schema*
+    * Generate input tempalte for an objec(*if provided by schema*)
+    > **Including required properties and optional properties with default value**
+    * Support properties intellisense(*if provided by schema*)(<kbd>Ctrl</kbd> + <kbd>Space</kbd>)
+    * Enumerated property value recommendation(*if provided by schema*)
+
+    ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-intellisense.gif)
 
 3. Hover support:
     * Hovering over a property shows description *if provided by schema*
+
+    ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-hover.gif)
 
 ## Extra Knowledge
 

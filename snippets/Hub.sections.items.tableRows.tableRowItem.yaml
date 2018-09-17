@@ -1,7 +1,0 @@
-name: tableRow
-label: tableRow
-description: Create a `tableRow` item in Hub.sections.items.tableRows
-body: |2
-  - title: ${1:title}
-    values:
-    - href: ${2:href}

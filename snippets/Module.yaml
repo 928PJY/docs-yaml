@@ -3,18 +3,17 @@ label: YamlMime Module
 description: Create a Module YAML
 body: |2
   ### YamlMime:Module
-  uid: ${1:uid}
-  title: ${2:title}
-  summary: ${3:summary}
-  abstract: ${4:abstract}
-  achievement: ${5:achievement}
-  iconUrl: ${6:iconUrl}
+  uid: $1
+  title: $2
+  summary: $3
+  abstract: $4
+  achievement: $5
+  iconUrl: $6
   levels:
-  - ${7|beginner,intermediate,advanced|}
+    - $7
   roles:
-  - ${8|developer,administrator,solutionsArchitect,businessUser,businessAnalyst|}
-  prerequisites: ${:prerequisites}
+    - $8
   products:
-  - ${9:product}
+    - $9
   units:
-  - ${10:unitItem}
+    - $10

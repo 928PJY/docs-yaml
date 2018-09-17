@@ -3,21 +3,16 @@ label: YamlMime LearningPath
 description: Create a LearningPath YAML
 body: |2
   ### YamlMime:LearningPath
-  uid: ${1:uid}
-  title: ${2:title}
-  summary: ${3:summary}
+  uid: $1
+  title: $2
+  summary: $3
   roles:
-  - ${4|developer,administrator,solutionsArchitect,businessUser,businessAnalyst|}
-  prerequisites: ${5:prerequisites}
+    - $4
   products:
-  - ${6:product}
+    - $5
   modules:
-  - ${7:module}
-  metadata:
-    title: ${8:title}
-    description: ${:description}
+    - $6
   levels:
-  - ${9|beginner,intermediate,advanced|}
-  iconUrl: ${10:iconUrl}
-  cardDescription: ${11:cardDescription}
-  achievement: ${12:achievement}
+    - $7
+  iconUrl: $8
+  achievement: $9
