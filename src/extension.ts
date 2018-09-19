@@ -20,17 +20,43 @@ export async function activate(context: vscode.ExtensionContext) {
     }, this);
 }
 
-async function addTocSchemaToConfig(){
+async function addTocSchemaToConfig() {
     const config = vscode.workspace.getConfiguration().inspect(YAML_SCHEMA_CONFIG_NAME_OF_VSCODE_YAML_EXTENSION);
     await addTocSchemaToConfigAtScope(TOC_SCHEMA_FILE, TOC_FILE_GLOBAL_PATTERN, vscode.ConfigurationTarget.Global, config.globalValue);
+
+    // this code should be mantian for two verison
+    await removeTocSchemaFromConfigAtScope(TOC_FILE_GLOBAL_PATTERN, vscode.ConfigurationTarget.Workspace, config.workspaceValue)
 }
 
-async function addTocSchemaToConfigAtScope(configKey: string, value: string, scope: vscode.ConfigurationTarget, valueAtScope: any){
+async function addTocSchemaToConfigAtScope(key: string, value: string, scope: vscode.ConfigurationTarget, valueAtScope: any) {
     let newValue: any = {};
     if (valueAtScope) {
         newValue = Object.assign({}, valueAtScope);
     }
-    newValue[configKey] = value;
+    Object.keys(newValue).forEach(configKey => {
+        var configValue = newValue[configKey];
+        if (value === configValue) {
+            delete newValue[configKey];
+        }
+    })
+    newValue[key] = value;
+    await vscode.workspace.getConfiguration().update(YAML_SCHEMA_CONFIG_NAME_OF_VSCODE_YAML_EXTENSION, newValue, scope);
+}
+
+async function removeTocSchemaFromConfigAtScope(value: string, scope: vscode.ConfigurationTarget, valueAtScope: any) {
+    if (!valueAtScope) {
+        return;
+    }
+    let newValue: any = {};
+    if (valueAtScope) {
+        newValue = Object.assign({}, valueAtScope);
+    }
+    Object.keys(newValue).forEach(configKey => {
+        var configValue = newValue[configKey];
+        if (value === configValue) {
+            delete newValue[configKey];
+        }
+    })
     await vscode.workspace.getConfiguration().update(YAML_SCHEMA_CONFIG_NAME_OF_VSCODE_YAML_EXTENSION, newValue, scope);
 }
 

@@ -1,16 +1,19 @@
 # Change Log
 
+## **0.1.8**
+- Bug fix: fix config issue after extension upgrade
+
 ## **0.1.7**
 
 - Update README file and snippets.
 
 ## **0.1.6**
 
-- Use online schemas(excluding toc schema), do not need to udpate extension when the schemas changed.
+- New feature: Use online schemas(excluding toc schema), do not need to udpate extension when the schemas changed.
 
 ## **0.1.5**
 
-- Support apply schema validation on toc.yml(case-insensitive file name)
+- New feature: Support apply schema validation on toc.yml(case-insensitive file name)
 
 ## **0.1.4**
 
