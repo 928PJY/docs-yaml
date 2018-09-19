@@ -17,34 +17,37 @@ Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-
 
 ### 1. YAML validation
 
-    * Apply schema validation according to the [YAMLMime](#YamlMime)
-    * Detects errors such as:
-        * Invalid property value type
-        * Out of enum scope
-        * Required property is missing
-        * Unexpected property
+* Apply schema validation according to the [YAMLMime](#YamlMime)
+* Detects errors such as:
+    * Invalid property value type
+    * Out of enum scope
+    * Required property is missing
+    * Unexpected property
 
-    ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-validation.gif)
+![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-validation.gif)
 
 ### 2. Auto completion
 
-    * Generate input template for whole YAML file
+* Generate input template for whole YAML file
 
-        > **For now, the VSCode don't support auto-completion on a comment, so do not type `#` to get intellisense, just type `YamlMime` or YAMLMime type.**  
-    * Generate input template for an object(*if provided by schema*)  
-        > **Including required properties and optional properties with default value**  
-    * Support properties intellisense(*if provided by schema*)
-    * Enumerated property value recommendation(*if provided by schema*)
+> **For now, the VSCode don't support auto-completion on a comment, so do not type `#` to get intellisense, just type `YamlMime` or YAMLMime type.**
 
-        > **Intellisense is automatically triggered by what you have typed, but you can  also hit *<kbd>Ctrl</kbd> + <kbd>Space</kbd>* to get what you can type**.
+* Generate input template for an object(*if provided by schema*)  
 
-    ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-intellisense.gif)
+> **Including required properties and optional properties with default value**
+
+* Support properties intellisense(*if provided by schema*)
+* Enumerated property value recommendation(*if provided by schema*)
+
+> **Intellisense is automatically triggered by what you have typed, but you can  also hit *<kbd>Ctrl</kbd> + <kbd>Space</kbd>* to get what you can type**.
+
+![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-intellisense.gif)
 
 ### 3. Hover support
 
-    * Hovering over a property shows description *if provided by schema*
+* Hovering over a property shows description *if provided by schema*
 
-    ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-hover.gif)
+![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-hover.gif)
 
 ## Extra Knowledge
 
