@@ -1,42 +1,54 @@
 
 # Docs-YAML Support for Visual Studio Code
 
-[![Current Version](https://vsmarketplacebadge.apphb.com/version/Gizmos.docs-yaml.svg)](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
-[![Install Count](https://vsmarketplacebadge.apphb.com/installs/Gizmos.docs-yaml.svg)](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
-[![Open Issues](https://vsmarketplacebadge.apphb.com/rating/Gizmos.docs-yaml.svg) ](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
+[![Current-Version](https://vsmarketplacebadge.apphb.com/version/Gizmos.docs-yaml.svg)](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
+[![Install-Count](https://vsmarketplacebadge.apphb.com/installs/Gizmos.docs-yaml.svg)](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
+[![Open-Issues](https://vsmarketplacebadge.apphb.com/rating/Gizmos.docs-yaml.svg)](https://marketplace.visualstudio.com/items?itemName=Gizmos.docs-yaml)
 
 Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-developer/yaml-language-server).
 
 ## Features
 
-1. YAML validation:
-    * Apply schema validation according to the [YamlMime](#YamlMime)
+### New features:
+
+* The code intellisense is more intelligent now, extension can provide the intellisense according to the schema structure but not just text mapping.
+* Extension can generate input template for `object`(including required propertied and optional properties with default value)
+* You can type a `-` to trigger the intellisense for generating a new array item.
+
+### 1. YAML validation
+
+    * Apply schema validation according to the [YAMLMime](#YamlMime)
     * Detects errors such as:
         * Invalid property value type
-        * Out of enum scope
+        * Out of enumerable scope
         * Required property is missing
         * Unexpected property
 
     ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-validation.gif)
 
-2. Auto completion:
-    * Generate input tempalte for whole yaml file
-    > **For now, the VSCode don't support auto-completion on a comment, so do not type `#` to get intellisense, just type `YamlMime` or YamlMime type.**
-    * Generate input tempalte for an objec(*if provided by schema*)
-    > **Including required properties and optional properties with default value**
-    * Support properties intellisense(*if provided by schema*)(<kbd>Ctrl</kbd> + <kbd>Space</kbd>)
-    * Enumerated property value recommendation(*if provided by schema*)
+### 2. Auto completion
+
+    * Generate input template for whole YAML file
+
+        > **For now, the VSCode don't support auto-completion on a comment, so do not type `#` to get intellisense, just type `YamlMime` or YAMLMime type.**  
+    * Generate input template for an object(*if provided by schema*)  
+        > **Including required properties and optional properties with default value**  
+    * Support properties intellisense(*if provided by schema*)
+    * Enumerated property value recommendation(*if provided by schema*) (new features)
+
+        > **Intellisense is automatically triggered by what you have typed, but you can  also hit *<kbd>Ctrl</kbd> + <kbd>Space</kbd>* to get what you can type**.
 
     ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-intellisense.gif)
 
-3. Hover support:
+### 3. Hover support
+
     * Hovering over a property shows description *if provided by schema*
 
     ![screencast](https://raw.githubusercontent.com/928PJY/docs-yaml/master/images/docs-yaml-extension-hover.gif)
 
 ## Extra Knowledge
 
-### **YamlMime**
+### **YAMLMime**
 
 A YAML syntax to identify the mime type of this YAML document, which will decide the applied schema type
 e.g.
@@ -46,9 +58,9 @@ e.g.
 ....
 ```
 
-* YamlMime should be the first line
+* YAMLMime should be the first line
 * There are should be a space between triple `#` and case-sensitive `YamlMime`
-* There are should not be extra space between `YamlMime`, MimetypeName and `:`
+* There are should not be extra space between `YamlMime`, Mime-type and `:`
 
 ## Developer Support
 
@@ -70,12 +82,12 @@ e.g.
     # open the project in vscode
     $ code .
     ```
-4. Make changes as neccessary and the run the code using F5.
+4. Make changes as necessary and the run the code using F5.
     Refer to VS Code [documentation](https://code.visualstudio.com/docs/extensions/debugging-extensions) on how to run and debug the extension.
-5. Create a pull-request to Github repository and we will review, merge it and publish new version extension regularly.
+5. Create a pull-request to GitHub repository and we will review, merge it and publish new version extension regularly.
 
 ### Contributing to schemas and snippets
 
-Comming soon.
+Coming soon.
 
 **All contributions are welcome!**
