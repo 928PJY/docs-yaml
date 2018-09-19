@@ -11,16 +11,16 @@ Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-
 
 ### New features:
 
-* The code intellisense is more intelligent now, extension can provide the intellisense according to the schema structure but not just text mapping.
-* Extension can generate input template for `object`(including required propertied and optional properties with default value)
-* You can type a `-` to trigger the intellisense for generating a new array item.
+* The code intellisense is more intelligent now, extension can provide the intellisense according to the schema structure but not just text mapping.(v0.1.8 and later)
+* Extension can generate input template for `object`(including required propertied and optional properties with default value).(v0.1.8 and later)
+* You can type a `-` to trigger the intellisense for generating a new array item.(v0.1.8 and later)
 
 ### 1. YAML validation
 
     * Apply schema validation according to the [YAMLMime](#YamlMime)
     * Detects errors such as:
         * Invalid property value type
-        * Out of enumerable scope
+        * Out of enum scope
         * Required property is missing
         * Unexpected property
 
@@ -34,7 +34,7 @@ Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-
     * Generate input template for an object(*if provided by schema*)  
         > **Including required properties and optional properties with default value**  
     * Support properties intellisense(*if provided by schema*)
-    * Enumerated property value recommendation(*if provided by schema*) (new features)
+    * Enumerated property value recommendation(*if provided by schema*)
 
         > **Intellisense is automatically triggered by what you have typed, but you can  also hit *<kbd>Ctrl</kbd> + <kbd>Space</kbd>* to get what you can type**.
 
