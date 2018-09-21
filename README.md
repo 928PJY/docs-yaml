@@ -7,6 +7,17 @@
 
 Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-developer/yaml-language-server).
 
+## Schemas we use in this extension
+
+There are two rules we use to apply schemas:
+
+1. For YAMLMime-based YAML file, we use the the YAMLMime to match the schema which we will use to do validation according to our [config](https://raw.githubusercontent.com/928PJY/docs-yaml/master/config/schema_config.json).  
+Those schemas are hold on this [repository](https://github.com/MicrosoftDocs/schemas), Once schema files get updated, the extension will automatically pick up the latest version after a small latency (around 10min). There is no need to reopen or reload the extension.  
+**But if a new schema is added to this repository, to use it, we need to update this [config](https://raw.githubusercontent.com/928PJY/docs-yaml/master/config/schema_config.json) and release extension with new version**
+
+2. For toc file, there is no YAMLMime in the beginning of file, we use the filename to match the schema, and it is case-sensitive, `toc.yml` and `TOC.yml` will both be applied schema validation(*but `toc.yaml` will not*).  
+The [schema](https://github.com/928PJY/docs-yaml/blob/master/schemas/toc.schema.json) used for toc YAML file is now built in the extension, and we are going to move it to schema repository in the future.
+
 ## Features
 
 ### New features:
