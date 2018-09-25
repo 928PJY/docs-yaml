@@ -7,9 +7,9 @@
 
 Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-developer/yaml-language-server).
 
-## Schemas we use in this extension
+## Schemas supported to validate
 
-There are two rules we use to apply schemas:
+There are two categories of files that we run schema validation against:
 
 1. For YAMLMime-based YAML file, we use the the YAMLMime to match the schema which we will use to do validation according to our [config](https://raw.githubusercontent.com/928PJY/docs-yaml/master/config/schema_config.json).  
 Those schemas are hold on this [repository](https://github.com/MicrosoftDocs/schemas), Once schema files get updated, the extension will automatically pick up the latest version after a small latency (around 10min). There is no need to reopen or reload the extension.  
