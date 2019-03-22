@@ -8,6 +8,17 @@ import { YAML_SCHEMA_CONFIG_NAME_OF_VSCODE_YAML_EXTENSION, TOC_SCHEMA_FILE, TOC_
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
+
+    //pop up a notification saying we have a new home for docs-yaml
+    vscode.window.showInformationMessage("The docs-yaml extension has been republished by Microsoft. For ongoing updates, please install the new version, then uninstall the Gizmos version.", {modal:true}, "Get it now!")
+                 .then(selection => {
+                     if(selection == "Get it now!")
+                     {
+                        vscode.commands.executeCommand('vscode.open', vscode.Uri.parse("https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-yaml"))
+                     }
+                    
+                 })
+
     const subscriptions = [
         // Completion providers
         vscode.languages.registerCompletionItemProvider('yaml', new DocsYamlCompletionProvider()),
