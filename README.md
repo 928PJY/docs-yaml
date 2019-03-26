@@ -7,6 +7,8 @@
 
 Provides Docs-YAML support via [yaml-language-server](https://github.com/redhat-developer/yaml-language-server).
 
+>  **Note:** This extension has been republished as [Microsoft docs-yaml](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-yaml), and is now part of the [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack). Please install the new version and uninstall the Gizmos version for ongoing updates and support.
+
 ## Schemas supported to validate
 
 There are two categories of files that we run schema validation against:
